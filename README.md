@@ -1,5 +1,7 @@
 # wagtail-streamfield-index
 
+Indexing of streamfield data in Wagtail
+
 ## Installation
 
 Install the package
@@ -61,8 +63,11 @@ my_field = StreamField([
 ])
 ```
 
+For items inside list blocks, the `block_name` is set to the list block name with ":item" appended, since individual items inside a list block do not have a name.
+
 `block_value`
-The value of the block if it can be converted to a string. `StructBlock` and `StreamBlock`s have an empty string as the block_value since you can inspect the contents of those blocks by looking at their sub-blocks.
+The string value of the block, in the form that it is stored in the streamfield. `StructBlock`, `StreamBlock` and `ListBlock`s have an empty string as the block_value since you can inspect the contents of those blocks by looking at their sub-blocks.
+If you have a complex block type such as an ImageChooser block, see the `get_bound_block()` method
 
 `block_path`
 A slash-delimited path to the location of the block within the streamfield.
