@@ -7,7 +7,7 @@ INSTALL_REQUIRES = ["Wagtail>=2.0"]
 
 TESTING_REQUIRES = ["pytest==5.2.1", "pytest-django==3.5.1", "pytest-pythonpath==0.7.3"]
 
-LINTING_REQUIRES = ["black==20.8b1", "flake8==3.7.8", "flake8-black==0.1.1", "isort==5.5.3"]
+LINTING_REQUIRES = ["black==20.8b1", "flake8==3.7.8", "flake8-black==0.1.1", "isort==5.7.0"]
 
 setup(
     name="wagtail-streamfield-index",
