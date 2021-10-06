@@ -11,7 +11,7 @@ LINTING_REQUIRES = ["black==20.8b1", "flake8==3.7.8", "flake8-black==0.1.1", "is
 
 setup(
     name="wagtail-streamfield-index",
-    version="0.0.3",
+    version="0.0.4",
     description="Indexing for Wagtail streamfields",
     author="Mike Monteith",
     author_email="<mike.monteith@nhs.net>",
