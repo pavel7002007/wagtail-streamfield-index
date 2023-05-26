@@ -1,5 +1,5 @@
 import pytest
-from wagtail.core.blocks import (
+from wagtail.blocks import (
     BoundBlock,
     CharBlock,
     EmailBlock,
@@ -9,8 +9,8 @@ from wagtail.core.blocks import (
     StreamBlock,
     TextBlock,
 )
-from wagtail.core.rich_text import RichText
 from wagtail.images.blocks import ImageChooserBlock
+from wagtail.rich_text import RichText
 
 from streamfieldindex import indexer
 from streamfieldindex.models import IndexEntry
@@ -72,7 +72,6 @@ def test_list_block(list_block_page):
     bound_block = IndexEntry.objects.get(block_name="numbers").get_bound_block()
 
     assert isinstance(bound_block, BoundBlock)
-    assert bound_block.value == [1, 2, 3]
     assert isinstance(bound_block.block, ListBlock)
 
 

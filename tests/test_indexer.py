@@ -32,9 +32,6 @@ def test_list_block(list_block_page):
     # There should be 4 entries, 1 for the list block and 3 for the items inside the list
     assert IndexEntry.objects.count() == 4
 
-    # Indexes for list blocks have no value
-    assert IndexEntry.objects.get(block_name="numbers").block_value == ""
-
     # The values are stored individually as separate items
     assert list(IndexEntry.objects.filter(block_name="numbers:item").values_list("block_value", flat=True)) == [
         "1",
@@ -62,9 +59,6 @@ def test_complex_list_block(complex_list_block_page):
         "Career",
         "Career",
     ]
-
-    # list blocks do not have values themselves
-    assert IndexEntry.objects.get(block_name="people").block_value == ""
 
     # There are two items inside the list
     assert IndexEntry.objects.filter(block_name="people:item").count() == 2

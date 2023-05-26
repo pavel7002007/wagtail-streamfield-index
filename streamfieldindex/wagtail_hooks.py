@@ -1,5 +1,5 @@
-from wagtail.core import hooks
-from wagtail.core.signals import page_published
+from wagtail import hooks
+from wagtail.signals import page_published
 
 from .indexer import index_page
 

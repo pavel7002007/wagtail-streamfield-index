@@ -60,6 +60,7 @@ e.g "author" or "heading" in the following example:
 my_field = StreamField([
     ('author', AuthorBlock()),
     ('heading', CharBlock()),
+    use_json_field=True
 ])
 ```
 

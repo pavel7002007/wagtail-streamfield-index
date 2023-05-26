@@ -2,8 +2,8 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
-import wagtail.core.blocks
-import wagtail.core.fields
+import wagtail.blocks
+import wagtail.fields
 import wagtail.images.blocks
 
 
@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
             name='HomePage',
             fields=[
                 ('page_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='wagtailcore.page')),
-                ('body', wagtail.core.fields.StreamField([('heading', wagtail.core.blocks.CharBlock()), ('description', wagtail.core.blocks.TextBlock()), ('email', wagtail.core.blocks.EmailBlock()), ('number', wagtail.core.blocks.IntegerBlock()), ('numbers', wagtail.core.blocks.ListBlock(wagtail.core.blocks.IntegerBlock())), ('paragraph', wagtail.core.blocks.RichTextBlock()), ('image', wagtail.images.blocks.ImageChooserBlock()), ('person', wagtail.core.blocks.StructBlock([('name', wagtail.core.blocks.CharBlock()), ('bio', wagtail.core.blocks.RichTextBlock()), ('body', wagtail.core.blocks.StreamBlock([('heading', wagtail.core.blocks.CharBlock()), ('paragraph', wagtail.core.blocks.RichTextBlock()), ('image', wagtail.images.blocks.ImageChooserBlock())]))])), ('people', wagtail.core.blocks.ListBlock(wagtail.core.blocks.StructBlock([('name', wagtail.core.blocks.CharBlock()), ('bio', wagtail.core.blocks.RichTextBlock()), ('body', wagtail.core.blocks.StreamBlock([('heading', wagtail.core.blocks.CharBlock()), ('paragraph', wagtail.core.blocks.RichTextBlock()), ('image', wagtail.images.blocks.ImageChooserBlock())]))]))), ('stream', wagtail.core.blocks.StreamBlock([('heading', wagtail.core.blocks.CharBlock()), ('paragraph', wagtail.core.blocks.RichTextBlock()), ('image', wagtail.images.blocks.ImageChooserBlock())]))])),
+                ('body', wagtail.fields.StreamField([('heading', wagtail.blocks.CharBlock()), ('description', wagtail.blocks.TextBlock()), ('email', wagtail.blocks.EmailBlock()), ('number', wagtail.blocks.IntegerBlock()), ('numbers', wagtail.blocks.ListBlock(wagtail.blocks.IntegerBlock())), ('paragraph', wagtail.blocks.RichTextBlock()), ('image', wagtail.images.blocks.ImageChooserBlock()), ('person', wagtail.blocks.StructBlock([('name', wagtail.blocks.CharBlock()), ('bio', wagtail.blocks.RichTextBlock()), ('body', wagtail.blocks.StreamBlock([('heading', wagtail.blocks.CharBlock()), ('paragraph', wagtail.blocks.RichTextBlock()), ('image', wagtail.images.blocks.ImageChooserBlock())]))])), ('people', wagtail.blocks.ListBlock(wagtail.blocks.StructBlock([('name', wagtail.blocks.CharBlock()), ('bio', wagtail.blocks.RichTextBlock()), ('body', wagtail.blocks.StreamBlock([('heading', wagtail.blocks.CharBlock()), ('paragraph', wagtail.blocks.RichTextBlock()), ('image', wagtail.images.blocks.ImageChooserBlock())]))]))), ('stream', wagtail.blocks.StreamBlock([('heading', wagtail.blocks.CharBlock()), ('paragraph', wagtail.blocks.RichTextBlock()), ('image', wagtail.images.blocks.ImageChooserBlock())]))])),
             ],
             options={
                 'abstract': False,

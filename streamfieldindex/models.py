@@ -1,5 +1,5 @@
 from django.db import models
-from wagtail.core.blocks import ListBlock, StreamBlock, StructBlock
+from wagtail.blocks import ListBlock, StreamBlock, StructBlock
 
 
 class BlockTypes:
