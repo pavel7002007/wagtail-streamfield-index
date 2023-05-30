@@ -1,6 +1,6 @@
-from wagtail.core.blocks import StreamValue, StructValue
-from wagtail.core.fields import StreamField
-from wagtail.core.models import Page
+from wagtail.blocks import StreamValue, StructValue
+from wagtail.fields import StreamField
+from wagtail.models import Page
 
 from .iterator import flatten_streamfield
 from .models import BlockTypes, IndexEntry

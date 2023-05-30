@@ -60,6 +60,7 @@ e.g "author" or "heading" in the following example:
 my_field = StreamField([
     ('author', AuthorBlock()),
     ('heading', CharBlock()),
+    use_json_field=True
 ])
 ```
 
@@ -107,6 +108,9 @@ for index_entry in IndexEntry.objects.filter(block_name="author"):
 
 1. Clone the repo `git clone https://github.com/nhsuk/wagtail-streamfield-index.git`
 2. Install dependencies `pip install .[testing,linting]`
+
+If you are having issues in installing, it may be of use to use an environment tool 
+like [virtualenv](https://docs.python.org/3/library/venv.html)
 
 ### Formatting
 

@@ -4,9 +4,9 @@ import json
 import pytest
 from django.core.files.images import ImageFile
 from PIL import Image
-from wagtail.core.blocks.stream_block import StreamValue
-from wagtail.core.models import Page
+from wagtail.blocks.stream_block import StreamValue
 from wagtail.images import get_image_model
+from wagtail.models import Page
 
 from .testapp.models import HomePage
 

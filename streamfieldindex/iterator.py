@@ -1,4 +1,4 @@
-from wagtail.core import blocks
+from wagtail import blocks
 
 
 def flatten_block(block, path=None):
