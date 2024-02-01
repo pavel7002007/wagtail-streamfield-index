@@ -19,7 +19,7 @@ class IndexEntry(models.Model):
     block_path = models.TextField()
     field_name = models.CharField(max_length=255)
 
-    page = models.ForeignKey("wagtailcore.Page", on_delete=models.CASCADE)
+    page = models.ForeignKey("wagtailcore.Page", on_delete=models.CASCADE, related_name="block_index")
 
     def get_bound_block(self):
         field_value = getattr(self.page.specific, self.field_name)
